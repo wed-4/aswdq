@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+  <body>
+    <p class="font-weight-bold">新BTS嫌い人民共和国 メンバー管理システム</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>役職</th>
+          <th>年齢</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for member in members %}
+        <tr>
+          <th scope="row">{{ member.id }}</th>
+          <td>{{ member.name }}</td>
+          <td>{{ member.role }}</td>
+          <td>{{ member.age }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
